@@ -1,0 +1,20 @@
+---
+
+# Desired location for neovim source files
+# defaults to $HOME/.local/src/neovim
+neovim_source_path: "{{ lookup('env', 'HOME') }}/.local/src/neovim"
+
+# todo: support additional build types (Release, Debug, RelWithDebInfo)
+# make CMAKE_BUILD_TYPE=Release
+neovim_build_type: Debug
+
+# todo: support custom nvim binary install location
+# make CMAKE_INSTALL_PREFIX=$HOME/local/nvim install
+neovim_install_dir: ""
+
+neovim_cleanup: true
+
+neovim_remove_distro_version: true
+
+# Build from tags (master, nightly, stable)
+neovim_desired_tag: nightly
